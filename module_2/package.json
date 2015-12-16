@@ -1,0 +1,23 @@
+{
+  "name": "my-json-sorter",
+  "version": "0.0.0",
+  "description": "return received json after sorting.",
+  "main": "json_sorter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NileshPharande/assign_02.git"
+  },
+  "keywords": [
+    "json",
+    "sort"
+  ],
+  "author": "nileshp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NileshPharande/assign_02/issues"
+  },
+  "homepage": "https://github.com/NileshPharande/assign_02#readme"
+}
