@@ -9,7 +9,7 @@ var fs = require("fs");
     {
         try
         {
-            if(fileName == null || fileName == undefined || fileName = "") {
+            if(fileName == "") {
                 return readJSONCallBack("fileName not provided.", null);
             }
             if(!fs.existsSync(fileName)) {
@@ -48,6 +48,16 @@ var fs = require("fs");
         });
     };
 //}
+
+/*
+readJSONFile("../test_asign_2/source.json",function(error, responce){
+    if(error) {
+        console.log("Error: ", error);
+    } else {
+        console.log("Responce: ",responce);
+    }
+});
+*/
 
 //module.exports = readJSON;
 module.exports.readJSONFile = readJSONFile; 

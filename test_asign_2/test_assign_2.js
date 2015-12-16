@@ -1,11 +1,19 @@
 var json_reader = require("my-json-reader");
+var json_sort = require("my-json-sorter");
 
 try {
-    json_reader.readJSONFile("./source.json", function readJSONResponce(err, responce){
-        if(err) {
-            console.log("Error:---- ", err);
+    json_reader.readJSONFile("./source.json", function readJSONResponce(readErr, responceJSON){
+        if(readErr) {
+            console.log("json_reader Error:---- ", readErr);
         } else {
-            console.log("sourceJSON: ", responce);
+            console.log("Before sort: ", responceJSON);
+            json_sort.json_sorter(responceJSON, function sortJSONResponce(sortErr, sortedJSON){
+                if(sortErr) {
+                    console.log("json_sorter Error:---- ", sortErr);
+                } else {
+                    console.log("Sorted JSON: ", sortedJSON);
+                }
+            });
         }
     });
 } catch (errorResponce) {
