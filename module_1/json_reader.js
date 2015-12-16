@@ -9,6 +9,9 @@ var fs = require("fs");
     {
         try
         {
+            if(fileName == null || fileName == undefined || fileName = "") {
+                return readJSONCallBack("fileName not provided.", null);
+            }
             if(!fs.existsSync(fileName)) {
                 return readJSONCallBack(fileName +" file is not present in current folder.", null);
             }
