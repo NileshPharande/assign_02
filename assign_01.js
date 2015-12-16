@@ -102,7 +102,7 @@ try {
     function checkPermission(file, cb){
         //r,w,x ----> 4,2,1 
         var mask = 2;
-        fs.stat (file, function (error, stats){
+        fs.stat (file, function statResponce(error, stats){
             if (error){
                 return cb (error, false);
             }else{
@@ -179,12 +179,6 @@ try {
             console.log("Series Responce: ", responce);
         }
     );
-
-
-
-
-
-
 
 
 } catch(errorMessage) {
