@@ -98,7 +98,7 @@ function writeTextFile(textFile, array, writeTextCallback)
         return writeTextCallback(null, textFile + " is created successfully. Thank you.");
     } catch (errorMessage) {
         console.log("Writing text file failed: ", errorMessage);
-        return writeTextCallback("Writing " + fileName + " terminated abnormally.", null);
+        return writeTextCallback("Writing " + textFile + " terminated abnormally.", null);
     } 
 }
 

@@ -103,7 +103,7 @@ function writeXMLFile(xmlFile, inputArray, writeXMLCallback)
 
     } catch (errorMessage) {
         console.log("Writing XML file failed: ", errorMessage);
-        return writeTextCallback("Writing " + fileName + " terminated abnormally.", null);
+        return writeTextCallback("Writing " + xmlFile + " terminated abnormally.", null);
     }
 }
 

@@ -1,4 +1,4 @@
-#my-json-to-text
+#my-json-to-text-writer
 
 0. Depricated version: (0.0.0).
 1. Accepts the array of students and name/path of file.
