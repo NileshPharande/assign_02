@@ -1,6 +1,7 @@
 var json_reader = require("my-json-reader");
 var json_sort = require("my-json-sorter");
 var textFileWriter = require("my-json-to-text-writer");
+var xmlFileWriter = require("my-json-to-xml-writer");
 
 try {
     json_reader.readJSONFile("./source.json", function readJSONResponce(readErr, responceJSON){
@@ -13,8 +14,11 @@ try {
                     console.log("json_sorter Error:---- ", sortErr);
                 } else {
                     //console.log("Sorted JSON: ", sortedJSON);
-                    textFileWriter.json_to_text_writer("./files/sorted_destination.txt", sortedJSON.students, function textFileWriterCallback(error, responceMessage){
-                        console.log(responceMessage);
+                    textFileWriter.json_to_text_writer("./files/sorted_destination.txt", sortedJSON.students, function textFileWriterCallback(error, responceMessage1){
+                        console.log(responceMessage1);
+                        xmlFileWriter.json_to_xml_writer("./files/sorted_destination.xml", sortedJSON.students, function xmlFileWriterCallback(error, responceMessage2){
+                            console.log(responceMessage2);
+                        });
                     });
                 }
             });

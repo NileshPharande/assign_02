@@ -1,0 +1,29 @@
+{
+  "name": "my-json-to-xml-writer",
+  "version": "0.0.0",
+  "description": "Accepts filename and json to write in the xml file.",
+  "main": "json_to_xml_writer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "prompt": "0.2.14",
+    "xmlbuilder": "2.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NileshPharande/assign_02.git"
+  },
+  "keywords": [
+    "json",
+    "to",
+    "xml",
+    "writer"
+  ],
+  "author": "nileshp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NileshPharande/assign_02/issues"
+  },
+  "homepage": "https://github.com/NileshPharande/assign_02#readme"
+}
