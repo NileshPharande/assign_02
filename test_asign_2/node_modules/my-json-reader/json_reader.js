@@ -31,7 +31,7 @@ var fs = require("fs");
                 return readJSONCallBack(null, sourceJSON);
             });
         } catch (errorMessage){
-            return readJSONCallBack("json_reader terminated abnormally.", null);
+            return readJSONCallBack("json_reader terminated abnormally: " + errorMessage , null);
         }
     }
 

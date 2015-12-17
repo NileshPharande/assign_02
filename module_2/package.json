@@ -1,6 +1,6 @@
 {
   "name": "my-json-sorter",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "return received json after sorting.",
   "main": "json_sorter.js",
   "scripts": {

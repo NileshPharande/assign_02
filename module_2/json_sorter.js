@@ -35,8 +35,8 @@ function json_sorter(inputJSON, sorterCallback)
         inputJSON.students = studentArray;    //Not making difference actually.
         return sorterCallback(null, inputJSON);
 
-    } catch (errorResponce) {
-        return sorterCallback("json_sorter terminated abnormally.", null);
+    } catch (errorMessage) {
+        return sorterCallback("json_sorter terminated abnormally: " + errorMessage , null);
     }
     
 }
