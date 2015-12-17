@@ -13,7 +13,7 @@ try {
                     console.log("json_sorter Error:---- ", sortErr);
                 } else {
                     //console.log("Sorted JSON: ", sortedJSON);
-                    textFileWriter.json_to_text_writer("./files/sorted_destination.txt", sortedJSON, function textFileWriterCallback(error, responceMessage){
+                    textFileWriter.json_to_text_writer("./files/sorted_destination.txt", sortedJSON.students, function textFileWriterCallback(error, responceMessage){
                         console.log(responceMessage);
                     });
                 }

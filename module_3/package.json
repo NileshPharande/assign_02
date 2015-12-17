@@ -1,6 +1,6 @@
 {
   "name": "my-json-to-text-writer",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Accepts filename and json to write in the file.",
   "main": "json_to_text_writer.js",
   "scripts": {

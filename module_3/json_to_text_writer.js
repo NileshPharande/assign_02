@@ -4,14 +4,14 @@ var prompt = require("prompt");
 
 
 //Public function to write text file
-function json_to_text_writer(fileName, jsonObject, textFileWriterCallback)
+function json_to_text_writer(fileName, studentArray, textFileWriterCallback)
 {
     try
     {
         if(fileName == "" ) {
             return textFileWriterCallback(null, "FileName not provided.");
         }
-        if( !(jsonObject) || jsonObject == undefined ) {
+        if( !(studentArray) || studentArray == undefined ) {
             return textFileWriterCallback(null, "Invalid JSON object received."); 
         }
 
@@ -28,14 +28,14 @@ function json_to_text_writer(fileName, jsonObject, textFileWriterCallback)
                         console.log("Error: ", error);
                         return textFileWriterCallback(null, "Failed " + fileName);
                     }
-                    return textFileWriterCallback(null,"Modified " + fileName);
+                    return textFileWriterCallback(null, "Modified " + fileName);
                 });
             } else {
-                return textFileWriterCallback(null,"Not modified " + fileName);
+                return textFileWriterCallback(null, "Not modified " + fileName);
             }
         });
     } catch (errorMessage) {
-    	console.log("json_to_text_writer terminated abnormally: " + errorMessage);
+        console.log("json_to_text_writer terminated abnormally: " + errorMessage);
         return textFileWriterCallback(null, "process terminated.");
     }
 }
@@ -48,7 +48,7 @@ function checkExistanceOfFile(fileName, existstanceCallback)
         if(!fs.existsSync(fileName)) {
             return existstanceCallback(null, 0);
         }
-        console.log(fileName+ " is already exists... Do you like to overWrite? (y/n)\n");
+        console.log(fileName+ " is already exists... Do you like to overWrite? (y/n)");
         prompt.start();
         prompt.get(['promptInput'], function promptReply(err, result) {
             if(err) {
